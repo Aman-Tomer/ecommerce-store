@@ -1,7 +1,7 @@
 //'use strict';
 
-
-var stripe = Stripe('pk_test_51JPA7ySJh9HUbtwiWlXMU9y7W6g5gEppbblfMefWedslne3yByoFxrCcceW5ixhxQhegUODfQb1kIFu2jhGjKKse00PyK8bCfo');
+// use your Stripe Publishable key here
+var stripe = Stripe('');
 
 var elem = document.getElementById('submit');
 clientsecret = elem.getAttribute('data-secret');

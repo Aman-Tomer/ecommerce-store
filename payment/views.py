@@ -1,7 +1,6 @@
 import json
 
 import stripe
-from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from django.http.response import HttpResponse
 from django.shortcuts import render
@@ -30,7 +29,8 @@ def BasketView(request):
     total = total.replace('.', '')
     total = int(total)
 
-    stripe.api_key = settings.SECRET_KEY
+    # use your Stripe Secret key here
+    stripe.api_key = ''
     intent = stripe.PaymentIntent.create(
         amount=total,
         currency='inr',
